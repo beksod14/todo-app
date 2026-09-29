@@ -2,10 +2,10 @@ name: CI
 
 on:
   push:
-    branches: 
+    branches:
       - master
   pull_request:
-    branches: 
+    branches:
       - master
 
 jobs:
@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: global envni ishlatish
-      run: echo $NODE_ENV
+      - name: Global envni ishlatish
+        run: echo $NODE_ENV
 
-      -name: Checkout repisitory
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      name: Install dependensies
-      run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
